@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-top: 10px">
+    <input type="text" id="1">    <input type="text" id="2">
+</div>
+<div style="margin-top: 5px">
+    <input type="button" value="Addition" onclick="addition()">
+    <input type="button" value="Subtraction" onclick="subtraction()">
+    <input type="button" value="Muliptication" onclick="muliptication()">
+    <input type="button" value="Divition" onclick="divition()">
+</div>
+<p id="result"></p>
+</body>
+<script>
+    function addition() {
+        let a = document.getElementById("1").value;
+        let b = document.getElementById("2").value;
+        let result = parseInt(a) + parseInt(b);
+        document.getElementById("result").innerText = "Result addition: " +result;
+
+    }
+    function  subtraction() {
+        let a = document.getElementById("1").value;
+        let b = document.getElementById("2").value;
+        let result = parseInt(a) - parseInt(b);
+        document.getElementById("result").innerText = "Result addition: " +result;
+
+    }
+    function muliptication() {
+        let a = document.getElementById("1").value;
+        let b = document.getElementById("2").value;
+        let result = parseInt(a) * parseInt(b);
+        document.getElementById("result").innerText = "Result addition: " + result;
+    }
+    function divition() {
+        let a = document.getElementById("1").value;
+        let b = document.getElementById("2").value;
+        let result = parseInt(a)/parseInt(b);
+        document.getElementById("result").innerText = "Result addition: " +result;
+    }
+</script>
+</html>

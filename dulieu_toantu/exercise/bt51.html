@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<table style="margin-left:400px">
+    <tr>
+        <th>Amount</th>
+        <th>From Curerency</th>
+        <th>To Currency</th>
+    </tr>
+    <td><input id="tien" type="name"></td>
+    <td>
+        <select>
+            <option value="vn">Viet Nam</option>
+        </select>
+    </td>
+    <td>
+        <select>
+            <option value="doi2">USD</option>
+        </select>
+    </td>
+    <td><input type="button" value="covert" onclick="Convert()"></td>
+    <tr>
+    <td colspan="4" id="result"></td>
+
+
+    </tr>
+
+</table>
+
+
+</body>
+<script>
+    function Convert() {
+        let tien = document.getElementById("tien").value;
+        let result = tien/23000
+        document.getElementById("result").innerText = "Result : " +result
+
+
+    }
+</script>
+</html>

@@ -6,28 +6,14 @@
 </head>
 <body>
 <script>
-    let a;
-    let b;
-    let c;
-    a = prompt('vat ly');
-    b = prompt('hoa hoc');
-    c = prompt('sinh hoc');
-    let j = parseInt(a);
-    let q = parseInt(b);
-    let k = parseInt(c);
-    let are = j+q+k;
-    document.write('tong diem 3 mon = ' +are)
-    let a;
-    let b;
-    let c;
-    a = prompt('vat ly');
-    b = prompt('hoa hoc');
-    c = prompt('sinh hoc');
-    let j = parseInt(a);
-    let q = parseInt(b);
-    let k = parseInt(c);
-    let hi = (j+q+k):3;
-    document.write('diem trung binh = ' + hi)
+
+    let a = parseFloat(prompt('vat ly'));
+    let b = parseFloat(prompt('hoa hoc'));
+    let c = parseFloat(prompt('sinh hoc'));
+    let are = a+b+c;
+    console.log("tong diem 3 mon : " +are);
+    let you = (a+b+c)/3;
+    console.log("diem trung binh : " +you);
 
 
 </script>
