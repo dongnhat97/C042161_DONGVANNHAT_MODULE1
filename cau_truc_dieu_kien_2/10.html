@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    let phicodinh=30000;
+    let sophut =prompt("nhập số phút đã sữ dụng");
+    let tongphi ;
+    if (sophut>200){
+        tongphi =(sophut-200)*200+150*400+600*50+phicodinh
+        document.write("phí sử dụng là " + tongphi + " nghìn đồng")
+    }else if (sophut>150){
+        tongphi =(sophut-150)*400+600*50+phicodinh
+        document.write("phí sử dụng là " + tongphi + " nghìn đồng")
+    }else if (sophut>50){
+        tongphi =(sophut-50)*600+phicodinh
+        document.write("phí sử dụng là " + tongphi + " nghìn đồng")
+    }
+
+</script>
+</html>
