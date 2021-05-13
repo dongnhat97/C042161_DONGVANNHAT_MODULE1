@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let month= 0;
+    let tienGoc= 50000000;
+    let tienLai = 0;
+    let tongLai=0
+    do {
+        tienLai= (tienGoc*12/100)/12
+        tongLai+=tienLai
+        tienGoc-=4100000;
+        month++
+        document.write('Lãi T. ' + month + ' = '+ tienLai.toLocaleString( 'de-DE' ) + ' VND'+'<br>');
+    } while (month<12);
+    document.write('Tổng lãi = '+ tongLai.toLocaleString( 'de-DE') + 'VND');
+</script>
+</body>
+</html>
