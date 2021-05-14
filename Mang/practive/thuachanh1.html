@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body { padding-top: 50px}
+</style>
+<body>
+<input type="text" id="txtValue"/>
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+<div id="result"></div>
+<script>
+    // thực hành bài 1: Tạo và thao tác với mảng
+    let i=0;
+    let arr = new Array();
+    function add_element_to_array() {
+        arr.push(document.getElementById("txtValue").value);
+        document.getElementById("txtValue").value = ''
+    }
+    function display_array() {
+        let html = ''
+        for (i=0; i<arr.length;i++) {
+            html+= 'Element ' + i + '= ' + arr[i] + '<br>'
+        }
+        document.getElementById("result").innerHTML= html;
+    }
+</script>
+</body>
+</html>
