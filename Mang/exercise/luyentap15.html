@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="text" id="input2">
+<input type="button" value="nhandang" onclick="myfunction()">
+<div id="result"></div>
+<script>
+    function myfunction() {
+        let a = document.getElementById("input1").value;
+        let b = document.getElementById("input2").value;
+        if (a==b) {
+            document.getElementById("result").innerText = '2 chuoi giong nhau';
+        }  else {
+            document.getElementById("result").innerText= '2 chuoi khac nhau';
+        }
+
+    }
+</script>
+</body>
+</html>

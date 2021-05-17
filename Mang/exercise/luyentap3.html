@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 'Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+    //     In ra giá trị trung bình của các phần tử trong mảng
+    let count = 0 ;
+    let max = 0
+    let arr = Array(10)
+    for (let i = 0 ;i<arr.length;i++) {
+        arr[i] = parseInt(prompt('nhap vao'))
+        if (arr[i]>max) {
+            max=arr[i]
+        }alert('so nguyen lan nhat :' +max+ 'gia tri trung binh'+max/2)
+    }
+</script>
+</body>
+</html>

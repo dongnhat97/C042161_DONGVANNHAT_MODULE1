@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<input type="button" value="demtu" id="buttonn" onclick="estiLetter()">
+<div id="result"></div>
+<script>
+function estiLetter() {
+    let count = 0;
+    let a = document.getElementById("input").value;
+    for (let i = 0;i<a.length;i++) {
+        if (a[i]===' ') {
+            count++
+        }
+    }document.getElementById("result").innerText= " co " +(count +1) +"tu"
+
+}
+</script>
+</body>
+</html>

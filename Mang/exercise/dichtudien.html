@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="translate" type="text">
+<input type="button" value="Button" onclick="buttonn()">
+<div id="result"></div>
+<script>
+    let arrENG = ['dog','cat','blue','ruler'];
+    let arrVN = ['cho','meo','mau xanh','cai thuoc'];
+    function buttonn() {
+        let a = document.getElementById("translate").value
+        for (let i = 0;i < arrENG.length;i++) {
+            if (a === arrENG[i]) {
+                 document.getElementById("result").innerText = arrVN[i]
+                break;
+            }else {
+                document.getElementById("result").innerText = 'du lieu vuot qua quy dinh '
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>
