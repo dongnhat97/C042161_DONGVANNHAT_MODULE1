@@ -6,16 +6,17 @@
 </head>
 <body>
 <script>
-    let sum = parseInt(prompt('nhap'));
-    let arr = new Array();
-    let result = arr[0];
-    for (let i =1 ; i <arr.length ; i++) {
-        if ((arr[i-1]%2===0)&&(arr[i]%2===0)) {
-            arr.push('-'+ arr[i])
-        }else {
-            arr.push(arr[i])
-        }
-    }console.log(result.join(''))
+    let x = parseInt(prompt('chieu dai mang'))
+    let arr = Array(x)
+    for (let i = 0;i<arr.length;i++) {
+        arr[i] = parseInt(prompt('input'))
+    }
+    let result=[]
+    for (let i = 0 ; i<arr.length;i++) {
+        if ( arr[i-1]%2===0 && arr[i]%2===0) {
+            result.push('-', arr[i])
+        }else result.push(arr[i])
+    }document.write(result)
 
 </script>
 </body>

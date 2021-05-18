@@ -6,18 +6,31 @@
 </head>
 <body>
 <script>
-   let arr = [1,2,3,4,5]
-   let a = 8;
-   let b = arr.push(a);
-   alert(arr);
-   // chèn 8 vào vị trí thứ 2
-   for (let i= 0;i<arr.length;i++) {
-     arr[arr.length-5] = arr[arr.length-1]
-       break;
+    // let x = parseInt(prompt('so luong trong mang'));
+    // let arr = Array(x)
+    // let index = parseInt(prompt('vi tri muon chen'));
+    // let b = parseInt(prompt('nhap so muon chen'));
+    // for (let i = arr.length-1;i>=index;i--) {
+    //     arr[i]=parseInt(prompt('mang'))
+    //     arr[i+1] =arr[i]
+    // }arr[index] = b
+    // document.write(arr)
+    let x = parseInt(prompt('do dai mang '))
+    let arrayXepHang = Array(x)
+    for (let i = 0; i<arrayXepHang.length;i++) {
+        arrayXepHang[i] = parseInt(prompt('ki tu trong mang '))
+    }
 
-   }
-   arr[arr.length-1] = 2
-   document.write(arr)
+    let iInsert = parseInt(prompt("Please input index to insert: "));
+    let elementInsert = parseInt(prompt("Please input element: "));
+
+    for (let i = arrayXepHang.length - 1; i >= iInsert; i--) {
+        arrayXepHang[i + 1] = arrayXepHang[i];
+    }
+
+    arrayXepHang[iInsert] = elementInsert;
+
+    console.log(arrayXepHang);
 </script>
 </body>
 </html>
