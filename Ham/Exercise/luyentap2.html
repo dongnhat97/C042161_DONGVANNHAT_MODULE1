@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input" type="text">
+<input type="button" value="tang" onclick="oneup()">
+<div id="resut"></div>
+<script>
+    // Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. Gọi hàm từ
+    // trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+    function oneup() {
+     let a = document.getElementById("input").value;
+     let b = parseFloat(a);
+     b+=1
+        document.getElementById("resut").innerText = +b
+    }
+</script>
+</body>
+
+</html>

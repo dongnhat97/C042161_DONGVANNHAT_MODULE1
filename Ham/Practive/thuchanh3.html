@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Xây dựng hàm nhận vào một tham số là một mảng cho trước. Hàm thực hiện tìm giá trị nhỏ nhất trong
+    // mảng và trả về giá trị đó. Sử dụng hàm vừa xây dựng trên với mảng như sau:
+    function minArr(arr1) {
+       let min = arr1[0]
+        for (let i=1;i<arr1.length;i++) {
+            if (arr1[i]<min) {
+                min = arr1[i]
+            }
+        }return min
+    }
+    let arr2 = [1,2,3,4,5,6]
+    let minn = minArr(arr2)
+    alert(minn)
+    
+</script>
+</body>
+</html>

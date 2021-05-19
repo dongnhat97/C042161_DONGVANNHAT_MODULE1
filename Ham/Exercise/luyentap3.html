@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoạithông báo
+    // cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    function begin(ar1,ar2) {
+       if (ar1>ar2) {
+           return true
+       }else {
+           return false
+       }
+    }
+    let a = parseFloat(prompt('nhap tham so 1'));
+    let b = parseFloat(prompt('nhap tham so 2'));
+    if (begin(a,b)) {
+        alert('a>b')
+    }else {
+        let total = a + b
+        alert(total);
+    }
+</script>
+</body>
+</html>
