@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="input" >
+<input type="button" value="Add" onclick="add()">
+<div id="list"></div>
+
+<script>
+    let arr = ["SamSung Galaxy","Nokia6","IphoneProMax"]
+    function listable() {
+        let html ="<table>\n" +
+            "    <tr>\n" +
+            "        <th>Product Name</th>\n" +
+            "        <th></th>\n" +
+            "        <th></th>\n" +
+            "    </tr>\n";
+
+        for (let i = 0;i<arr.length;i++) {
+            html +="<tr>\n" +
+                "        <td>"+arr[i]+"</td>\n" +
+                "        <td><button>Edit</button></td>\n" +
+                "        <td><button onclick='deleteProduct("+i+")'>Delete</button></td>\n" +
+                "    </tr>\n";
+        }
+        html=html+"</table>"
+        document.getElementById("list").innerHTML = html
+    }
+    listable()
+
+    function add() {
+       let newProduct = document.getElementById("input").value;
+       if (newProduct==="") {
+           alert("please input product name")
+       }else {
+           arr.push(newProduct);
+           alert("Add new product "+newProduct+" ok")
+           listable()
+       }
+    }
+    function deleteProduct(index) {
+          if (confirm("are you want delete "+arr[index])+"?") {
+              arr.splice(index,1)
+              listable()
+          }
+
+    }
+
+
+</script>
+</body>
+</html>
