@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tạo lớp chuyển đổi nhiệt độ
+    class Temperature {
+        constructor(c,cf,ck) {
+            this.c = c
+            this.cf=cf;
+            this.ck=ck;
+        }
+        getC(c) {
+            return this.c
+            }
+        getCk(cf) {
+            return 1.8*this.c+32
+        }
+        getCf(cf) {
+            return this.c+273.15
+        }
+
+    }
+    let c = parseFloat(prompt("do C"))
+    let obj = new Temperature(c)
+    let cF = obj.getCf()
+    let cK = obj.getCk()
+    alert(+c+" do c"+"="+cF+"do f"+" va"+cK+" do k")
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvasHTML" width="500" height="600"></canvas>
+<script>
+    class Retangle {
+        constructor(y,x,s,c) {
+            this.y=y;
+            this.x=x;
+
+        }
+        getY(y) {
+            return this.y
+        }
+        getX(x) {
+            return this.x
+        }
+        getS(s) {
+            return this.x*this.y
+        }
+        getC(c) {
+            return (this.x+this.y)*2
+        }
+    }
+    let i = parseFloat(prompt("rong"))
+    let o = parseFloat(prompt("dai"))
+    let obj = new Retangle(o,i)
+    let s = obj.getS(o,i);
+    let c= obj.getC();
+    alert( " chu vi : "+c+" dien tich "+s)
+    let canvasHTML = document.getElementById("canvasHTML");
+    let canvasContext = canvasHTML.getContext("2d");
+    canvasContext.rect(50, 50,o ,i );
+    canvasContext.stroke()
+
+
+
+    // let canvasHTML = document.getElementById("myCanvas");
+    // canvasContext = canvasHTML.getContext("2d");
+    // canvasContext.rect(50, 50, lengthRec, widthRec);
+    // canvasContext.stroke();
+
+
+
+</script>
+
+
+</body>
+</html>

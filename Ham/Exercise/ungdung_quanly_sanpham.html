@@ -23,7 +23,7 @@
         for (let i = 0;i<arr.length;i++) {
             html +="<tr>\n" +
                 "        <td>"+arr[i]+"</td>\n" +
-                "        <td><button>Edit</button></td>\n" +
+                "        <td><button onclick='editProduct("+i+")'>Edit</button></td>\n" +
                 "        <td><button onclick='deleteProduct("+i+")'>Delete</button></td>\n" +
                 "    </tr>\n";
         }
@@ -49,7 +49,27 @@
           }
 
     }
+    function editProduct(index2) {
+           let newName = prompt("newnam")
+        if (newName=="") {
+            alert("please input name")
+        }
+        else {
+            arr[index2]=newName
+            listable()
+        }
+    }
 
+
+    // function editItem(index) {
+    //     let newName = prompt("Input new name: ");
+    //     if (newName == "") {
+    //         alert("Please input product name:");
+    //     } else {
+    //         phone[index] = newName;
+    //         displayItem(phone);
+    //     }
+    // }
 
 </script>
 </body>
