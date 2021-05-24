@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight=weight;
+        }
+        getWeight() {
+            return this.weight
+        }
+        decrease() {
+            if (this.weight>0) {
+                this.weight--
+            }
+        }
+        isEmpty() {
+            if (this.weight==0) {
+                return true
+            }else {
+                return false
+            }
+        }
+    }
+    class Human {
+        constructor(name,gender,weight) {
+            this.name= name;
+            this.gender=gender;
+            this.weight= weight;
+        }
+        getWeight() {
+            return this.weight
+        }
+        getGender() {
+            return this.gender
+        }
+        getName() {
+            return this.name
+        }
+        setName(newName) {
+            this.name= newName
+        }
+        setWeight(newWeight) {
+            this.weight=newWeight
+        }
+        setGender(newGender) {
+            this.gender=newGender
+        }
+        isMale() {
+            if (this.gender=="Male") {
+                return true
+            }else {
+                return false
+            }
+        }
+        checkApple(apple) {
+           if (apple.getWeight()>0) {
+               return true
+           }else {
+               return false
+           }
+        }
+        eat(apple) {
+            if (apple.getWeight()>0) {
+                this.weight ++
+                apple.decrease()
+            }
+        }
+        say(content) {
+            alert(this.name+ "say" +content)
+        }
+
+    }
+    let objAppleRed = new Apple(10);
+    let objAdam = new Human("Adam","male",60);
+    let objEva = new Human("Eva","female",45)
+    objAdam.say("hello")
+    objEva.say("i love you")
+    objAdam.eat(objAppleRed)
+    alert("apple red weight: " +objAppleRed.getWeight());
+    alert("Adam weight :" +objAdam.getWeight())
+    objEva.eat(objAppleRed)
+    alert("apple red weight: " +objAppleRed.getWeight());
+    alert("Eva weight :" +objEva.getWeight())
+
+
+
+</script>
+</body>
+</html>

@@ -6,28 +6,102 @@
 </head>
 <body>
 <script>
-    // Tạo lớp Circle với phương thức khởi tạo có 1 tham số truyền vào
-    class Circle {
-        constructor(radius, area) {
-            this.radius = radius;
-            this.area = area
-        }
-// Xây dựng phương thức trả về bán kính của hình tròn
-        getRadius(radius) {
-            return this.radius;
-        }
-// Xây dựng phương thức tính diện tích hình tròn
-        getArea(area) {
-            return Math.PI * radius * radius;
-        }
-    }
-    // Sử dụng lớp vừa tạo. Tạo đối tượng hình tròn với bán kính là 2
-    let circle = new Circle(2);
-    // Truy cập phương thức của lớp hình tròn vừa tạo và gán cho các biến radius, area
-    let radius = circle.getRadius(); // 2
-    let area = circle.getArea(); // 12.566370614359172
-    // Hiển thị bán kính và diện tích
-    alert("radius: " + radius + "; area: " + area);
+
+    // class Mobile {
+    //     constructor(levelPower) {
+    //         this.levelPower = levelPower;
+    //         this.status = "off";
+    //         this.message ="";
+    //         this.arryOnText =[];
+    //         this.arryReceive=[];
+    //         this.arrySend=[];
+    //     }
+    //     checkStatus(){
+    //         if (this.status === "on")
+    //             console.log("Điện thoại đang mở");
+    //         else
+    //             console.log("Điện thoại đang tắt");
+    //         this.levelPower--;
+    //     }
+    //     turnMobile(status){
+    //         if (status ==="on")
+    //             this.status = "on";
+    //         else
+    //             this.status = "off";
+    //         this.levelPower--;
+    //     }
+    //     chargePower(){
+    //         if (this.status ==="off")
+    //             console.log("Vui lòng mở máy trước khi sử dụng");
+    //         else {
+    //             if (this.levelPower<100)
+    //                 this.levelPower = 100;
+    //             console.log("Pin được sạc đầy: "+ this.levelPower);
+    //         }
+    //     }
+    //     setMessage(message){
+    //         if (this.status ==="off")
+    //             console.log("Vui lòng mở máy trước khi sử dụng");
+    //         else {
+    //             this.message = message;
+    //             this.levelPower--;
+    //         }
+    //     }
+    //     sendMessage(message, mobie){
+    //         if (this.status ==="off")
+    //             console.log("Vui lòng mở máy trước khi sử dụng")
+    //         else {
+    //             mobie.setMessage(message);
+    //             mobie.arryReceive.push(message);
+    //             this.arrySend.push(message);
+    //             this.levelPower--;
+    //         }
+    //     }
+    //     creatMessage(message){
+    //         if (this.status ==="off")
+    //             console.log("Vui lòng mở máy trước khi sử dụng");
+    //         else {
+    //             this.arryOnText.push(message);
+    //             this.levelPower--;
+    //         }
+    //     }
+    //     checkReceiveMessage(){
+    //         if (this.status ==="off")
+    //             console.log("Vui lòng mở máy trước khi sử dụng");
+    //         else {
+    //             this.levelPower--;
+    //             return this.arryReceive;
+    //         }
+    //     }
+    //     checkSendMessage(){
+    //         if (this.status ==="off")
+    //             console.log("Vui lòng mở máy trước khi sử dụng");
+    //         else {
+    //             this.levelPower--;
+    //             return this.arrySend;
+    //         }
+    //     }
+    //     checkWaitMessage(){
+    //         if (this.status ==="off")
+    //             console.log("Vui lòng mở máy trước khi sử dụng");
+    //         else {
+    //             this.levelPower--;
+    //             return this.arryOnText;
+    //         }
+    //     }
+    // }
+    //
+    // let samsung = new Mobile(35);
+    // let iphone = new Mobile(50);
+    // iphone.checkStatus();
+    // iphone.turnMobile("on");
+    // iphone.checkStatus();
+    // samsung.turnMobile("on");
+    //
+    // iphone.sendMessage("Heloo samsung, this mess from iphone", samsung);
+    // console.log(iphone.checkSendMessage());
+    // console.log(samsung.checkReceiveMessage());
+
 </script>
 </body>
 </html>

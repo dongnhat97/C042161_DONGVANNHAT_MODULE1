@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // xây dựng lớp mô phỏng sự hoạt động của đèn pin
+  class Battery {
+      constructor(energy) {
+          this.energy=energy;
+      }
+      getEnergy() {
+          return this.energy
+
+      }
+      getDecrease() {
+          if (this.energy>0) {
+              this.energy--
+          }
+      }
+  }
+  class FlashLamp {
+      constructor(battery) {
+          this.battery = battery;
+      }
+      set(battery) {
+          this.battery = battery
+      }
+      getBatteryInfo() {
+          return this.battery.getEnergy()
+      }
+      light() {
+          if (this.status) {
+              alert("lighting")
+          }else {
+              alert("not lighting")
+          }
+      }
+      turnOn() {
+          if (this.battery.getEnergy()>0) {
+              this.status = true
+              this.battery.getDecrease();
+              return true
+          }
+      }
+      turnOff() {
+          this.status = false;
+
+      }
+  }
+  objBattery = new Battery(10);
+  objFlashLamp = new FlashLamp(objBattery);
+  document.write("moi lap pin : " +objBattery.getEnergy()+"<br>");
+  objFlashLamp.light();
+  objFlashLamp.turnOn()
+    objFlashLamp.light();
+  document.write("pin sau khi bat den :" +objFlashLamp.getBatteryInfo()+"<br>")
+    objFlashLamp.turnOff()
+    objFlashLamp.light()
+    document.write("pin sau khi tat den :" +objFlashLamp.getBatteryInfo())
+    objFlashLamp.turnOn();
+  objFlashLamp.light();
+  document.write("pin sau khi bat :" +objFlashLamp.getBatteryInfo())
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

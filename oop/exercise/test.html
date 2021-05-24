@@ -6,21 +6,54 @@
 </head>
 <body>
 <script>
-    class Temperature {
-        constructor(degree) {
-            this.degree = degree;
-        }
-        cToF() {
-            return (this.degree*1.8) + 32;
-        }
-        cToK() {
-            return this.degree + 273.15;
-        }
-    }
-    let c = parseFloat(prompt("do c"))
-    let temper = new Temperature(c);
-    document.write("Độ F tương ứng: " + temper.cToF() + "<br>");
-    document.write("Độ K tương ứng: " + temper.cToK());
+    // class Hero {
+    //     constructor(image, top, left, size) {
+    //         this.image = image;
+    //         this.top = top;
+    //         this.left = left;
+    //         this.size = size;
+    //     }
+    //     getHeroElement() {
+    //         return '<img width="' + this.size + '"' +
+    //             ' height="' + this.size + '"' +
+    //             ' src="' + this.image + '"' +
+    //             ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+    //     }
+    //     moveRight() {
+    //         this.left += 50;
+    //         console.log('ok: ' + this.left);
+    //     }
+    //     moveLeft() {
+    //         this.left -= 50;
+    //         console.log('ok: ' + this.left);
+    //     }
+    //     moveDown() {
+    //         this.top += 50;
+    //         console.log('ok: ' + this.top);
+    //     }
+    //     moveUp() {
+    //         this.top -= 50;
+    //         console.log('ok: ' + this.top);
+    //     }
+    // }
+    // let hero = new Hero('darius.png', 20, 30, 200);
+    // function
+    // start() {
+    //     if (hero.left < window.innerWidth - hero.size) {
+    //         hero.moveRight();
+    //     } else {
+    //         hero.moveLeft();
+    //     }
+    //     if (hero.top < window.innerHeight - hero.size) {
+    //         hero.moveDown();
+    //     } else {
+    //         hero.moveUp()
+    //     }
+    //     document.getElementById('game').innerHTML = hero.getHeroElement();
+    //     setTimeout(start, 500)
+    // }
+    // start();
+
 </script>
 </body>
 </html>
