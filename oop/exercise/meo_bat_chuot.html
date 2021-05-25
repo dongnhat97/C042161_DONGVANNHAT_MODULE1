@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rat {
+        constructor(name,weight,speed,status) {
+            this.name = name;
+            this.weight= weight;
+            this.speed = speed;
+            this.status = status;
+        }
+        getName() {
+            return this.name
+        }
+        getWeight() {
+            return this.weight
+        }
+        getSpeed() {
+            return this.speed
+        }
+
+        getStatus() {
+            if (this.status) {
+                console.log("chitchit")
+            }
+        }
+    }
+    class Cat {
+        constructor(name,weight,speed,status) {
+            this.name = name ;
+            this.weight = weight;
+            this.speed = speed;
+            this.status=status;
+        }
+        catName() {
+            return this.name
+        }
+        catWeight() {
+            return this.weight
+        }
+        catSpeed() {
+            return this.speed
+        }
+
+
+        catStatus() {
+            if (this.status) {
+                console.log("meo meo")
+            }
+        }
+        catch(objRat) {
+            if (this.speed>objRat.speed) {
+                console.log(this.name+ " da bat an duoc " +objRat.name)
+            }else {
+                console.log(this.name+"da khong bat duoc" +objRat.name)
+            }
+        }
+        eat(objRat) {
+             if (objRat.status === "song") {
+                 this.weight+=objRat.weight
+                 console.log("so can nang cua :"+this.name+" la "+this.weight)
+             }else {
+                 console.log("chuot khong con nua")
+             }
+        }
+
+    }
+    let objRat= new Rat("Jenny",5,50,"song");
+    let objCat = new Cat("Tom",10,55,"meo");
+    objRat.getStatus();
+    objCat.catStatus();
+    objCat.catch(objRat);
+    objCat.eat(objRat)
+
+
+</script>
+</body>
+</html>

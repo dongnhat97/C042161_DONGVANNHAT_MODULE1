@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Cho một mảng các số nguyên, hãy tìm tổng các phần tử của nó.
+    let x = parseInt(prompt("number in array"))
+    let arr1 = Array(x)
+    for (let i = 0; i<arr1.length;i++) {
+        arr1[i] = parseInt(prompt("arr[1]"))
+    }
+    myFunction(arr1)
+    function myFunction(arr) {
+        let num = 0
+        for (let i = 0;i<arr.length;i++) {
+
+            num += arr[i]
+        }
+        return console.log(num)
+    }
+</script>
+</body>
+</html>

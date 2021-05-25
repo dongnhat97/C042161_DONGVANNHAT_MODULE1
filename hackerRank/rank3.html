@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =[1,3,6,8];
+    let b = [1,4,5,9];
+    function myFunction(arr1,arr2) {
+        let sum1 = 0;
+        let sum2= 0;
+        for (let i = 0; i<arr1.length;i++) {
+            if (arr1[i]!=arr2[i]) {
+                if (arr1[i]>arr2[i]) {
+                    sum1++
+                }else {
+                    sum2++
+                }
+            }
+        }
+        return console.log("ti so cua 2 mang la : "+sum1+"-"+sum2);
+    }
+    myFunction(a,b);
+</script>
+</body>
+</html>

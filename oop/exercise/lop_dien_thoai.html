@@ -7,8 +7,62 @@
 <body>
 
 <script>
+    class Mobile {
+        constructor(name,battery,status,inbox,text) {
+            this.name=name;
+            this.battery=battery;
+            this.status=status;
+            this.inbox=inbox;
+            this.text=text
+        }
+        getBattery() {
+            return this.battery;
+        }
+        statusBattery() {
+            console.log("pin hien tai : " +this.battery)
+            this.battery--
+            this.status= true
+        }
+        getStatus() {
+            if (this.battery>0) {
+                console.log("vui long bat dien thoai");
+            }else {
+                console.log("may da het pin");
+            }
+            this.battery--
+        }
+        charge(){
+            if (this.battery) {
+                for (let i =0;i<=100;i++) {
+                    this.battery++
+                }
+            }
+        }
+        turnOn() {
+            console.log("dien thaoi da duoc bat");
+            this.battery--
+        }
+        turnOff() {
+            console.log("dien thoai da tat");
+        }
+        getTex() {
+            this.battery--;
+            return this.text;
 
 
+        }
+        getInbox(mess) {
+            console.log(mess.name+"da gui tin nhan cho ban :"+mess.text)
+            this.battery--;
+        }
+
+    }
+    let objNokia = new Mobile("Nokia",70,true,"","xin chao iphone , tui la nokia day");
+    let objIphone = new Mobile("Iphone",65,true,true,"");
+    objNokia.getTex();
+    objIphone.getInbox(objNokia);
+    console.log(objNokia.getBattery());
+    console.log(objIphone.getBattery());
 </script>
 </body>
 </html>

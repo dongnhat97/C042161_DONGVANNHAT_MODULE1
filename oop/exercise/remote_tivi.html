@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Tv {
+        constructor(channels,volume,on,off) {
+            this.channels = channels;
+            this.volume=volume;
+            this.on=on;
+            this.off=off;
+
+        }
+        getChannel() {
+            return this.channels
+        }
+        setChannel(channel8) {
+            this.channels =channel8
+        }
+        getVolume() {
+            return this.volume
+        }
+        setVolumeUp() {
+            this.volume++
+        }
+        setVolumeDown() {
+            this.volume--
+        }
+        getOn() {
+            if (this.on) {
+                alert("showed TV")
+                this.on=true
+            }else {
+                alert("you used the wrong button")
+            }
+        }
+        getOff() {
+            if (this.off) {
+                alert("you turned off TV")
+                this.off = true
+            }
+        }
+    }
+    class Remote {
+        constructor(nextChannel,remoteVolume) {
+            this.nextChannel = nextChannel;
+            this.remoteVolume = remoteVolume;
+        }
+        setNextChanel(newChannel) {
+            newChannel.setChannel()
+        }
+        setRemoteVolumeUp(newVolumeUp) {
+            newVolumeUp.setVolumeUp()
+            alert("am luong :" +newVolumeUp.getVolume())
+        }
+        setRemoteVolumeDown(newVolumeDown) {
+            newVolumeDown.setVolumeDown()
+        }
+        turnOn(setTurnOn) {
+            setTurnOn.getOn()
+        }
+        turnOff(setTurnOff) {
+            setTurnOff.getOff()
+        }
+    }
+    let objTv = new Tv("channels99",50,"on","off");
+    let objRemote = new Remote();
+    objRemote.turnOn(objTv);
+    alert("da chuyen den : " +objTv.getChannel());
+    objRemote.setNextChanel(objTv);
+    objRemote.setRemoteVolumeUp(objTv)
+    objRemote.setRemoteVolumeUp(objTv);
+    objRemote.turnOff(objTv)
+
+
+</script>
+</body>
+</html>
