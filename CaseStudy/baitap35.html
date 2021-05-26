@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<table>-->
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>Cafe</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td><button onclick="mot()">1</button></td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>Cam vat</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td><button onclick="hai()">2</button></td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>Ca rot</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td><button onclick="ba()">3</button> </td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>Nuoc loc</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td><button onclick="bon()">4</button> </td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td>nuoc mia</td>&ndash;&gt;-->
+<!--&lt;!&ndash;        <td><button onclick="nam()">5</button> </td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--    -->
+<!--</table>-->
+<script>
+ do {
+     let input = parseInt(prompt("san pham cau chung toi gom co: 1.sua chua hoa qua, 2.sua chia mit, 3.tra thai, 4.tra sua, 5.kem trang tien, 6.che"));
+
+
+     let count = 0;
+
+     switch (input) {
+         case 1:
+          count= parseInt(prompt("sua chua hoa qua co gia 20.000VND , vui long nhap so luong :"));
+          alert("tong thanh toa cua quy khach la : "+20000*count+"VND")
+         break;
+         case 2:
+          count =parseInt(prompt("sua chua mit co gia la 18.000VND, vui long nhap so luong :"));
+          alert("tong thanh toan cua quy khach la : "+15000*count+"VND")
+             break;
+         case 3:
+             count= parseInt(prompt("tra thai co gia 10.000VND , vui long nhap so luong :"));
+             alert("tong thanh toa cua quy khach la : "+12000*count+"VND")
+             break;
+         case 4:
+             count= parseInt(prompt(" tra sua co gia 30.000VND , vui long nhap so luong :"));
+             alert("tong thanh toa cua quy khach la : "+30000*count+"VND")
+             break;
+         case 5:
+             count= parseInt(prompt("kem trang tien co gia 10.000VND , vui long nhap so luong :"));
+             alert("tong thanh toa cua quy khach la : "+10000*count+"VND")
+             break;
+         case 6:
+             count= parseInt(prompt("che co gia 15.000VND , vui long nhap so luong :"));
+             alert("tong thanh toa cua quy khach la : "+15000*count+"VND")
+             break;
+         // default:
+         //     alert("san pham khong co trong menu cua hang")
+         //   break;
+
+     }
+     if (input == 7) {
+         alert("Thoát gọi món");
+         break;
+     }
+ }while (true);
+
+</script>
+</body>
+</html>

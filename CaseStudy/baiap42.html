@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//     Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+//     Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
+// ⇨	Có 3 kí tự khác nhau là a, b và c.
+    let a = ["hi","hu","he","hu","ha","ha"];
+    let sum = 0
+    let count = 0
+    for (let i = 0 ; i<a.length;i++) {
+        if (a[i]==a[i]) {
+            sum++
+            break;
+        }else {
+            count++
+        }
+
+    }
+    console.log(sum)
+</script>
+</body>
+</html>

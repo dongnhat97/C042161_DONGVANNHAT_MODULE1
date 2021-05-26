@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h = 5;
+    for (let i = 1 ; i<=h;i++) {
+        for (let j =1;j<2*h;j++) {
+            if (i==h||(i==1&&j==h)||(i==2&&j==4)||(i==2&&j==6)||(i==3&&j==3)||(i==3&&j==7)||(i==4&&j==2)||(i==4&&j==8)) {
+                document.write("*")
+            }else {
+                document.write("&ensp;")
+            }
+
+        }document.write("<br>")
+    }
+</script>
+</body>
+</html>
