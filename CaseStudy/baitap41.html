@@ -6,34 +6,35 @@
 </head>
 <body>
 <script>
-    let str = prompt("Nhập vào xâu kí tự").toLowerCase().split(' ');
-    let arr = [];
-    function xuLiChuoi(n) {
-        for (let i = 0; i < n.length; i++) {
-            if (n[i].length > 0) {
-                arr.push(n[i]);
+    let arr = prompt("in put Enter ")
+    // let newArr=[]
+    function myFunction(a) {
+        let newArr=[]
+    a.toLocaleLowerCase().split(" ");
+        for (let i = 0 ; i<a.length;i++) {
+            a[i]= a[i].charAt(0).toLocaleUpperCase()+a[i].substring(1)
+        }
+        for (let i = 0 ; i<a.length;i++) {
+            newArr.push(a[i])
+        }
+        newArr = newArr.join(" ")
+        alert(newArr)
+    }
+    myFunction(arr);
+
+    let newArr1 = newArr.split(" ");
+    console.log(newArr1)
+
+    function myFuction2(b) {
+        let max = b[0].length
+        for (let i = 0; i < b.length; i++) {
+            if (b[i].length > max) {
+                max = b[i]
             }
         }
-        for (let i = 0; i < arr.length; i++) {
-            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
-        }
-        arr = arr.join(" ");
-        alert(arr);
+        console.log(max)
     }
-    xuLiChuoi(str)
-    console.log(arr)
-    let newArr = arr.split(" ");
-    console.log(newArr);
-    function tinhDoDai(a){
-        let max = a[0];
-        for (let i=0;i< a.length;i++){
-            if (a[i].length > a[0].length){
-                max = a[i];
-            }
-        }
-        console.log(max);
-    }
-    tinhDoDai(newArr);
+    myFuction2(newArr1)
 </script>
 </body>
 </html>

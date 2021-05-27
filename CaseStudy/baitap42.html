@@ -9,15 +9,18 @@
 //     Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
 //     Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
 // ⇨	Có 3 kí tự khác nhau là a, b và c.
-let arr = "cabca";
-let newArr =[];
-newArr.push(arr[0])
-    for (let i = 1 ;i<arr.length;i++) {
-        if (newArr.indexOf(arr[i])==arr[i]) {
-            newArr.push(newArr[i])
-        }
+
+let s = 'cabca';     //a bị push 2 lần==>sai
+let result = [s[0]];
+for(let i=1; i<s.length;i++) {
+    if(s[0] !== s[i] && result.indexOf(s[i]) == -1) {
+        result.push(s[i]);
+    } else {
+        continue;
     }
-    console.log(newArr)
+}
+alert(result.length)
+
 </script>
 </body>
 </html>

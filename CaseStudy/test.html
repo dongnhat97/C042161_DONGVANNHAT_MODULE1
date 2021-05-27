@@ -6,6 +6,34 @@
 </head>
 <body>
 <script>
+    let arr = prompt("in put Enter ").toLocaleLowerCase().split(" ");
+    let newArr=[]
+    function myFunction(a) {
+        for (let i = 0 ; i<a.length;i++) {
+            a[i]= a[i].charAt(0).toLocaleUpperCase()+a[i].substring(1)
+        }
+        for (let i = 0 ; i<a.length;i++) {
+            newArr.push(a[i])
+        }
+        newArr = newArr.join(" ")
+        alert(newArr)
+    }
+    myFunction(arr);
+
+    let newArr1 = newArr.split(" ");
+    console.log(newArr1)
+
+    function myFuction2(b) {
+        let max = b[0].length
+        for (let i = 0; i < b.length; i++) {
+            if (b[i].length > max) {
+                max = b[i]
+            }
+        }
+        console.log(max)
+    }
+    myFuction2(newArr1)
+
 
 </script>
 </body>
