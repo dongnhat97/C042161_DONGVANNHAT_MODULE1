@@ -7,15 +7,15 @@
 <body>
 <script>
     let arr = prompt("in put Enter ")
-    // let newArr=[]
+    let newArr=[]
     function myFunction(a) {
-        let newArr=[]
-    a.toLocaleLowerCase().split(" ");
-        for (let i = 0 ; i<a.length;i++) {
-            a[i]= a[i].charAt(0).toLocaleUpperCase()+a[i].substring(1)
+
+    let arr1= a.toLocaleLowerCase().split(" ");
+        for (let i = 0 ; i<arr1.length;i++) {
+            arr1[i]= arr1[i].charAt(0).toLocaleUpperCase()+arr1[i].substring(1)
         }
-        for (let i = 0 ; i<a.length;i++) {
-            newArr.push(a[i])
+        for (let i = 0 ; i<arr1.length;i++) {
+            newArr.push(arr1[i])
         }
         newArr = newArr.join(" ")
         alert(newArr)
@@ -26,9 +26,9 @@
     console.log(newArr1)
 
     function myFuction2(b) {
-        let max = b[0].length
+        let max = b[0]
         for (let i = 0; i < b.length; i++) {
-            if (b[i].length > max) {
+            if (b[i].length > b[0].length) {
                 max = b[i]
             }
         }
