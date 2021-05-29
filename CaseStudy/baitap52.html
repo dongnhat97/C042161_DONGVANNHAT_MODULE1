@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m  = parseInt(prompt("so luong phan tu trong mang "))
+    let n = parseInt(prompt("so luong phan tu trong mang "))
+
+
+    function myFunction(m,n) {
+        let newArr = []
+        let arr = [Array(m),Array(n)];
+        for (let i = 0; i < arr.length; i++) {
+
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = parseInt(prompt("phan tu trong mang "+i+j))
+                let count = 0
+                for (let f = 1; f <= arr[i][j]; f++) {
+                    if (arr[i][j] % f == 0) {
+
+                        count++
+                    }
+
+                } if (count == 2) {
+                    newArr.push(arr[i][j])
+                }
+            }
+
+        }
+        return newArr
+    }
+
+   console.log(myFunction(m,n))
+</script>
+</body>
+</html>

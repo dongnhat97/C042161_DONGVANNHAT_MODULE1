@@ -7,7 +7,76 @@
 <body>
 <script>
 
+    // function matrix(rows, cols) {
+    //     let arr = [];
+    //     for (let i = 0; i < rows; i++) {
+    //         arr.push([]);
+    //         arr[i].push(Array(cols));
+    //         for (let j = 0; j < cols; j++) {
+    //             arr[i][j] = parseInt(prompt("Nhập các phần tử của mảng con: "));
+    //         }
+    //     }
+    //     return arr;
+    // }
+    // let m = parseInt(prompt("Nhập kích thước mảng lớn: "));
+    // let n = parseInt(prompt("Nhập kích thước mảng con: "));
+    // let array = matrix(m, n);
+    // console.log(array);
+    // let sum = 0;
+    // for (let i = 0; i < array.length; i++) {
+    //     for (let j = 0; j < array[i].length; j++) {
+    //         if ((array[i][j]) % 2 == 0) {
+    //             sum += array[i][j];
+    //         }
+    //     }
+    // }
+    // console.log(sum);
+    //
+    // // let n = parseInt(prompt('enter n:'));
+    // // let m = parseInt(prompt('enter m:'));
+    // // document.write(caculateSumEven(n,m));
+    // // function caculateSumEven(n, m) {
+    // //     let arr = [
+    // //         Array(n),
+    // //         Array(m)
+    // //     ];
+    // //     let sum = 0;
+    // //     for (let i = 0; i < arr.length; i++) {
+    // //         for (let j = 0; j < arr[i].length; j++) {
+    // //             arr[i][j] = parseFloat(prompt('input element ' + i + j));
+    // //             if (arr[i][j] % 2 == 0) {
+    // //                 sum += arr[i][j];
+    // //             }
+    // //
+    // //         }
+    // // //     }
+    // // //     for (let i = 0; i < arr.length; i++) {
+    // // //         for (let j = 0; j < arr[i].length; j++) {
+    // // //             if (arr[i][j] % 2 == 0) {
+    // // //                 sum += arr[i][j];
+    // // //             }
+    // // //         }
+    // //     }
+    // //     return sum;
+    // }
+     let m = parseInt(prompt("do dai cua mang m"));
+     let n = parseInt(prompt("do dai cua mang n"));
+     function myFunction(m,n) {
+         let sum = 0
+         let arr = [Array(m), Array(n)]
+         for (let i = 0; i < arr.length; i++) {
+             for (let j = 0; j < arr[i].length; j++) {
+                 arr[i][j] = parseFloat(prompt("input number tai : " + i + j))
+                 if (arr[i][j] % 2 == 0) {
+                     sum += arr[i][j];
+                 }
+             }
 
+
+         }
+         return sum
+     }
+    document.write(myFunction(m,n))
 </script>
 </body>
 </html>

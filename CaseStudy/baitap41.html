@@ -13,10 +13,11 @@
     let arr1= a.toLocaleLowerCase().split(" ");
         for (let i = 0 ; i<arr1.length;i++) {
             arr1[i]= arr1[i].charAt(0).toLocaleUpperCase()+arr1[i].substring(1)
-        }
-        for (let i = 0 ; i<arr1.length;i++) {
             newArr.push(arr1[i])
         }
+        // for (let i = 0 ; i<arr1.length;i++) {
+        //     newArr.push(arr1[i])
+        // }
         newArr = newArr.join(" ")
         alert(newArr)
     }

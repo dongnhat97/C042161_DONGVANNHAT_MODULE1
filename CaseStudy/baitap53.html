@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt("so phan tu trong mang"));
+    let n = parseInt(prompt("so phan tu trong mang"));
+    function myFunction(m,n) {
+        let arr = [Array(m),Array(n)]
+        for (let i = 0 ; i<arr.length;i++) {
+
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = parseInt(prompt("nhat dep zai" + i + j))
+            }
+        }
+
+                let max = arr[0][0]
+                let min = arr[0][0]
+        for (let i = 0 ; i<arr.length;i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j]
+                }
+                if (arr[i][j] < min) {
+                    min = arr[i][j]
+                }
+            }
+
+        }
+        return console.log(max, min)
+    }
+    myFunction(m,n)
+</script>
+</body>
+</html>
